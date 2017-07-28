@@ -1,0 +1,333 @@
+<html>
+<head>
+
+<style>
+.circleBase {
+    border-radius: 50%;
+    behavior: url(PIE.htc); /* remove if you don't care about IE8 */
+}
+
+.type0 {
+    width: 50px;
+    height: 50px;
+    background: #ccc;
+	background-color: White;
+}
+
+.type_black {
+    width: 50px;
+    height: 50px;
+    background: #ccc;
+	background-color: Black;
+}
+
+.type1 {
+    width: 50px;
+    height: 50px;
+    background: #ccc;
+	background-color: Red;
+}
+
+.type2 {
+    width: 50px;
+    height: 50px;
+    background: #ccc;
+	background-color: Green;
+}
+
+</style>
+
+</head>
+<body>
+<div id="winningMsg" style="text-align:center;z-index:-1;visibility:none;"></div>
+<table id="gameBoard" style="width:700px;height:500px;background-color: Black;">
+<tbody valign="top">
+<tr style="height:50px;" id="firstRow">
+<td style="width:50px;height:50px;" class="circleBase type_black"><div id="col_0" class="circleBase"></div></td> <td style="width:50px;height:50px;" class="circleBase type_black"><div id="col_1" class="circleBase"></div></td> <td style="width:50px;height:50px;" class="circleBase type_black"><div id="col_2" class="circleBase"></div></td> <td style="width:50px;height:50px;" class="circleBase type_black"><div id="col_3" class="circleBase"></div></td>
+<td style="width:50px;height:50px;" class="circleBase type_black"><div id="col_4" class="circleBase"></div></td> <td style="width:50px;height:50px;" class="circleBase type_black"><div id="col_5" class="circleBase"></div></td> <td style="width:50px;height:50px;" class="circleBase type_black"><div id="col_6" class="circleBase"></div></td> <td style="width:50px;height:50px;" class="circleBase type_black"><div id="col_7" class="circleBase"></div></td>
+</tr>
+<tr>
+<td style="width:50px"><div id="cr70" class="circleBase type0"></div></td> <td style="width:50px"><div id="cr71" class="circleBase type0"></div></td> <td style="width:50px"><div id="cr72" class="circleBase type0"></div></td> <td style="width:50px"><div id="cr73" class="circleBase type0"></div></td>
+<td style="width:50px"><div id="cr74" class="circleBase type0"></div></td> <td style="width:50px"><div id="cr75" class="circleBase type0"></div></td> <td style="width:50px"><div id="cr76" class="circleBase type0"></div></td> <td style="width:50px"><div id="cr77" class="circleBase type0"></div></td>
+</tr>
+<tr>
+<td style="width:50px"><div id="cr60" class="circleBase type0"></div></td> <td style="width:50px"><div id="cr61" class="circleBase type0"></div></td> <td style="width:50px"><div id="cr62" class="circleBase type0"></div></td> <td style="width:50px"><div id="cr63" class="circleBase type0"></div></td>
+<td style="width:50px"><div id="cr64" class="circleBase type0"></div></td> <td style="width:50px"><div id="cr65" class="circleBase type0"></div></td> <td style="width:50px"><div id="cr66" class="circleBase type0"></div></td> <td style="width:50px"><div id="cr67" class="circleBase type0"></div></td>
+</tr>
+<tr>
+<td style="width:50px"><div id="cr50" class="circleBase type0"></div></td> <td style="width:50px"><div id="cr51" class="circleBase type0"></div></td> <td style="width:50px"><div id="cr52" class="circleBase type0"></div></td> <td style="width:50px"><div id="cr53" class="circleBase type0"></div></td>
+<td style="width:50px"><div id="cr54" class="circleBase type0"></div></td> <td style="width:50px"><div id="cr55" class="circleBase type0"></div></td> <td style="width:50px"><div id="cr56" class="circleBase type0"></div></td> <td style="width:50px"><div id="cr57" class="circleBase type0"></div></td>
+</tr>
+<tr>
+<td style="width:50px"><div id="cr40" class="circleBase type0"></div></td> <td style="width:50px"><div id="cr41" class="circleBase type0"></div></td> <td style="width:50px"><div id="cr42" class="circleBase type0"></div></td> <td style="width:50px"><div id="cr43" class="circleBase type0"></div></td>
+<td style="width:50px"><div id="cr44" class="circleBase type0"></div></td> <td style="width:50px"><div id="cr45" class="circleBase type0"></div></td> <td style="width:50px"><div id="cr46" class="circleBase type0"></div></td> <td style="width:50px"><div id="cr47" class="circleBase type0"></div></td>
+</tr>
+<tr>
+<td style="width:50px"><div id="cr30" class="circleBase type0"></div></td> <td style="width:50px"><div id="cr31" class="circleBase type0"></div></td> <td style="width:50px"><div id="cr32" class="circleBase type0"></div></td> <td style="width:50px"><div id="cr33" class="circleBase type0"></div></td>
+<td style="width:50px"><div id="cr34" class="circleBase type0"></div></td> <td style="width:50px"><div id="cr35" class="circleBase type0"></div></td> <td style="width:50px"><div id="cr36" class="circleBase type0"></div></td> <td style="width:50px"><div id="cr37" class="circleBase type0"></div></td>
+</tr>
+<tr>
+<td style="width:50px"><div id="cr20" class="circleBase type0"></div></td> <td style="width:50px"><div id="cr21" class="circleBase type0"></div></td> <td style="width:50px"><div id="cr22" class="circleBase type0"></div></td> <td style="width:50px"><div id="cr23" class="circleBase type0"></div></td>
+<td style="width:50px"><div id="cr24" class="circleBase type0"></div></td> <td style="width:50px"><div id="cr25" class="circleBase type0"></div></td> <td style="width:50px"><div id="cr26" class="circleBase type0"></div></td> <td style="width:50px"><div id="cr27" class="circleBase type0"></div></td>
+</tr>
+<tr>
+<td style="width:50px"><div id="cr10" class="circleBase type0"></div></td> <td style="width:50px"><div id="cr11" class="circleBase type0"></div></td> <td style="width:50px"><div id="cr12" class="circleBase type0"></div></td> <td style="width:50px"><div id="cr13" class="circleBase type0"></div></td>
+<td style="width:50px"><div id="cr14" class="circleBase type0"></div></td> <td style="width:50px"><div id="cr15" class="circleBase type0"></div></td> <td style="width:50px"><div id="cr16" class="circleBase type0"></div></td> <td style="width:50px"><div id="cr17" class="circleBase type0"></div></td>
+</tr>
+<tr>
+<td style="width:50px"><div id="cr00" class="circleBase type0"></div></td> <td style="width:50px"><div id="cr01" class="circleBase type0"></div></td> <td style="width:50px"><div id="cr02" class="circleBase type0"></div></td> <td style="width:50px"><div id="cr03" class="circleBase type0"></div></td>
+<td style="width:50px"><div id="cr04" class="circleBase type0"></div></td> <td style="width:50px"><div id="cr05" class="circleBase type0"></div></td> <td style="width:50px"><div id="cr06" class="circleBase type0"></div></td> <td style="width:50px"><div id="cr07" class="circleBase type0"></div></td>
+</tr>
+</tbody>
+</table>
+
+<script type="text/javascript">
+// Brought to you by Adel Salah :)
+//var wholeColors = ['White','Red','Green','Blue','Yellow','Orange'];
+//var rightColors = [];
+//var trials = 12;
+//var userChosenColors = [];
+//var numberOfBalls = 5;
+var isGameFinished = false;
+var gameArray = [
+[0,0,0,0,0,0,0,0],
+[0,0,0,0,0,0,0,0],
+[0,0,0,0,0,0,0,0],
+[0,0,0,0,0,0,0,0],
+[0,0,0,0,0,0,0,0],
+[0,0,0,0,0,0,0,0],
+[0,0,0,0,0,0,0,0],
+[0,0,0,0,0,0,0,0]
+];
+var msg = '';
+var isPlayerOne = true;
+var firstRow = document.getElementById('firstRow');
+var allTDsInFirstRow = firstRow.getElementsByTagName('td');
+initGame();
+
+function checkDiagonal(valueToCheck,row,column){
+//to be done
+var result = false;
+var valueCounter = 1;
+var x1 = -1;
+var y1 = -1;
+
+//diagonal up
+for(x1 = column-1,y1 = parseInt(row)+1;x1 >=0 && y1 < gameArray.length ;y1++,x1--){
+if(gameArray[y1][x1] == valueToCheck)
+	valueCounter++;
+else
+	break;
+}
+
+//diagonal down
+for(x1 = parseInt(column)+1,y1 = row-1;x1 < gameArray.length && y1 >=0 ;y1--,x1++){
+if(gameArray[y1][x1] == valueToCheck)
+	valueCounter++;
+else
+	break;
+}
+//console.log('diagonal count: '+valueCounter);
+if(valueCounter >=4)
+	result = true;
+
+return result;
+}
+
+function checkReverseDiagonal(valueToCheck,row,column){
+// to be done 
+var result = false;
+var valueCounter = 1;
+var x1 = -1;
+var y1 = -1;
+
+//reverse diagonal up
+for(x1 = parseInt(column)+1,y1 = parseInt(row)+1;x1 < gameArray.length && y1 < gameArray.length ;y1++,x1++){
+if(gameArray[y1][x1] == valueToCheck)
+	valueCounter++;
+else
+	break;
+}
+
+//reverse diagonal down
+for(x1 = column-1,y1 = row-1;x1 >=0 && y1 >=0 ;y1--,x1--){
+if(gameArray[y1][x1] == valueToCheck)
+	valueCounter++;
+else
+	break;
+}
+console.log('diagonal count: '+valueCounter);
+if(valueCounter >=4)
+	result = true;
+
+return result;
+}
+
+function checkRightLeft(valueToCheck,row,column){
+var result = false;
+var valueCounter = 1;
+//var x1 = -1;
+// checking right
+for(var x1 = parseInt(column)+1;x1 < gameArray.length;x1++){
+if(gameArray[row][x1] == valueToCheck)
+	valueCounter++;
+else
+	break;
+
+}
+
+// checking left
+for(var x1 = column-1;x1 >= 0;x1--){
+if(gameArray[row][x1] == valueToCheck)
+	valueCounter++;
+else
+	break;
+}
+
+if(valueCounter >=4)
+	result = true;
+
+return result;
+}
+
+function checkUpDown(valueToCheck,row,column){
+var result = false;
+var valueCounter = 1;
+var x1 = -1;
+// checking up
+for(x1 = parseInt(row)+1;x1 < gameArray.length;x1++){
+if(gameArray[x1][column] == valueToCheck)
+	valueCounter++;
+else
+	break;
+
+}
+// checking down
+for(x1 = row-1;x1 >= 0;x1--){
+if(gameArray[x1][column] == valueToCheck)
+	valueCounter++;
+else
+	break;
+}
+
+if(valueCounter >=4)
+	result = true;
+
+return result;
+}
+
+function checkAnswer(valueToCheck,row,column){
+var textWinningColor = '';
+if(valueToCheck == 1){
+msg = 'Player one (red player) won';
+textWinningColor = 'Red';
+}
+else{
+msg = 'Player two (green player) won';
+textWinningColor = 'Green';
+}
+if(checkUpDown(valueToCheck,row,column)){
+document.getElementById('winningMsg').style.visibility = 'visible';
+document.getElementById('winningMsg').style.color = textWinningColor;
+document.getElementById('winningMsg').innerHTML = msg;
+isGameFinished = true;
+return;
+}
+
+if(checkRightLeft(valueToCheck,row,column)){
+document.getElementById('winningMsg').style.visibility = 'visible';
+document.getElementById('winningMsg').style.color = textWinningColor;
+document.getElementById('winningMsg').innerHTML = msg;
+isGameFinished = true;
+return;
+}
+
+if(checkReverseDiagonal(valueToCheck,row,column)){
+document.getElementById('winningMsg').style.visibility = 'visible';
+document.getElementById('winningMsg').style.color = textWinningColor;
+document.getElementById('winningMsg').innerHTML = msg;
+isGameFinished = true;
+return;
+}
+
+if(checkDiagonal(valueToCheck,row,column)){
+document.getElementById('winningMsg').style.visibility = 'visible';
+document.getElementById('winningMsg').style.color = textWinningColor;
+document.getElementById('winningMsg').innerHTML = msg;
+isGameFinished = true;
+return;
+}
+
+}
+
+function fireMouseOverEvent(element){
+if(isPlayerOne)
+	element.getElementsByTagName('div')[0].className = 'circleBase type1';
+else
+	element.getElementsByTagName('div')[0].className = 'circleBase type2';
+}
+
+function initGame(){
+for(i=0;i<allTDsInFirstRow.length;i++){
+//var divElement = allTDsInFirstRow[i].getElementsByTagName('div')[0];
+allTDsInFirstRow[i].addEventListener ("mouseover",function (e) {
+fireMouseOverEvent(this);
+});
+
+allTDsInFirstRow[i].addEventListener ("mouseout",function (e) {
+this.getElementsByTagName('div')[0].className = 'circleBase type_black';
+});  
+
+allTDsInFirstRow[i].addEventListener ("click",function (e) {
+//To be continued
+if(isGameFinished){
+alert("Game is over, please refresh the page to start over");
+return;
+}
+
+var columnIndex = this.getElementsByTagName('div')[0].id.split('_')[1];
+var j=0;
+var columnFullChecker = true;
+for(;j<gameArray.length;j++){
+if(gameArray[j][columnIndex] == 0){
+columnFullChecker = false;
+if(isPlayerOne){
+gameArray[j][columnIndex] = 1;
+document.getElementById('cr'+j+columnIndex).className = 'circleBase type1';
+}
+else{
+gameArray[j][columnIndex] = 2;
+document.getElementById('cr'+j+columnIndex).className = 'circleBase type2';
+}
+break;
+}
+
+}
+
+if(columnFullChecker){
+alert('This column is full !!');
+return;
+}
+
+var valueToBePassedToCheck = -1;
+if(isPlayerOne){
+	isPlayerOne = false;
+	valueToBePassedToCheck = 1;
+}
+else{
+	isPlayerOne = true;
+	valueToBePassedToCheck = 2;
+}
+
+fireMouseOverEvent(this);
+checkAnswer(valueToBePassedToCheck,j,columnIndex);
+
+});
+
+
+}
+
+}
+</script>
+</body>
+</html>
